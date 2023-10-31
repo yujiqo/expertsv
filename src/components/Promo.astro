@@ -1,0 +1,49 @@
+---
+import Container from "../layouts/Container.astro";
+import Button from "./Button.astro";
+---
+
+<div class="promo">
+    <Container>
+        <div class="promo-content">
+            <h1>Бухгалтерский учет в Алматы</h1>
+            <p>
+                Компания с более чем 13-летним опытом в области бухгалтерского и налогового учета. <br>
+                Основные принципы нашей работы: ответственность, качество, гибкость, нацеленность на результат <br>
+                Доверь учет своего предприятия нам и навсегда забудь проблемы с гос. органами.
+            </p>
+            <Button id="price-list">Наши услуги</Button>
+        </div>
+    </Container>
+</div>
+
+<style>
+    .promo {
+        color: var(--gray);
+        position: relative;
+        height: 100vh;
+    }
+    .promo:before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        filter: grayscale(50%);
+        background-image: url("../../public/promo.jpg");
+        box-shadow: 0px -150px 100px 0px var(--white) inset;
+    }
+    .promo-content {
+        position: absolute;
+        top: 35vh;
+        right: 6vw;
+        width: 60%;
+    }
+    .promo-content h1 {
+        font-size: 3.5rem;
+        margin: 0;
+    }
+    .promo-content p {
+        font-size: 1.5rem;
+        margin: 50px 0;
+    }
+</style>

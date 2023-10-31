@@ -1,0 +1,37 @@
+---
+interface Props {
+    id: string;
+    onClick?: () => void;
+}
+
+const { id, onClick } = Astro.props;
+---
+
+<button id={id} class="btn">
+    <slot/>
+</button>
+
+<style>
+    .btn {
+        cursor: pointer;
+        display: inline-block;
+        font-size: inherit;
+        color: var(--white);
+        background-color: var(--accent);
+        font-weight: bold;
+        border: 0;
+        border-radius: 10px;
+        padding: 10px 20px;
+        box-shadow: 0px 0px 0px 0px var(--accent-dark);
+        transition: all .5s ease 0s;
+    }
+    .btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 5px 0px 0px var(--accent-dark);
+    }
+</style>
+
+<script define:vars={{id, onClick}}>
+    if (onClick !== null)
+        document.getElementById(id).addEventListener("click", onClick);
+</script>
