@@ -2,15 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Promo from "../components/Promo.astro";
-import Company from "../components/Company.astro";
-
-const headerIds = {
-    company: "company-header-link"
-};
 ---
 
 <Layout title="ExpertSV - Бухгалтерские услуги">
     <Navbar/>
     <Promo/>
-    <Company companyHeaderId={headerIds.company} />
 </Layout>
