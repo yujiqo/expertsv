@@ -25,14 +25,18 @@ const { title } = Astro.props;
 
     :root {
         --white: #e3e3e3;
+        --gray: #393939;
 		--accent: #2f82e0;
 		--accent-light: #b8cfff;
 		--accent-dark: #095d9c;
 	}
+    body {
+        margin: 0;
+    }
 	html {
-        color: var(--white);
+        color: var(--gray);
 		font-family: system-ui, sans-serif;
-        background-color: #393939;
+        background-color: var(--white);
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
