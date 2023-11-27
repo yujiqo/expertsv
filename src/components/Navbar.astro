@@ -7,11 +7,6 @@ import Button from "./Button.astro";
     <Container>
         <div class="nav-box">
             <img class="logo" src="../../public/logo.png" alt="expertsv logo">
-            <ul class="nav-links">
-                <li class="nav-link">Список услуг</li>
-                <li class="nav-link">Отзывы</li>
-                <li class="nav-link">Контакты</li>
-            </ul>
             <div class="nav-order-box">
                 <span class="nav-phone">+77770283322</span>
                 <Button id="order-btn">Связаться с нами</Button>
@@ -31,36 +26,43 @@ import Button from "./Button.astro";
         box-shadow: 0px 3px 50px 50px rgba(227,227,227,.8);
         z-index: 1;
     }
+
     .nav-box {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
+
     .logo {
         width: 250px;
         filter: brightness(170%);
         cursor: pointer;
     }
+
     .nav-links {
         display: flex;
         list-style: none;
         margin: 0;
         padding: 0;
     }
+
     .nav-link {
         cursor: pointer;
         box-shadow: 0px 0px 0px 0px var(--gray);
         margin: 0 10px;
         transition: all .5s ease 0s;
     }
+
     .nav-link:hover {
         transform: translateY(-3px);
         box-shadow: 0px 3px 0px 0px var(--gray);
     }
+
     .nav-order-box {
         display: flex;
         align-items: center;
     }
+
     .nav-phone {
         color: var(--accent);
         margin: 0 15px;
