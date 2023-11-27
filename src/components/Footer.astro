@@ -1,0 +1,36 @@
+---
+import Container from "../layouts/Container.astro";
+---
+
+<div class="footer">
+    <Container>
+        <div class="footer-content">
+            <div class="credentials">
+                <p>+7 (777) 028-33-22</p>
+                <p>Здесь будет адрес</p>
+            </div>
+            <p>&#9400; All rights reserved</p>
+        </div>
+    </Container>
+</div>
+
+<style>
+    .footer {
+        background-color: var(--accent-dark);
+        box-shadow: 0px 110px 60px -35px var(--white) inset;
+        padding: 150px 0 80px 0;
+    }
+
+    .footer-content {
+        color: var(--white);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .credentials > p {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 0;
+    }
+</style>

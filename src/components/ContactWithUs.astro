@@ -1,0 +1,46 @@
+---
+import Container from "../layouts/Container.astro";
+import Input from "./Input.astro";
+import Button from "./Button.astro";
+---
+
+<Container>
+    <div class="contact-with-us">
+        <form class="contact-with-us-form">
+            <Input id="name" name="name" type="text" placeholder="Ваше имя"/>
+            <Input id="phone" name="phone" type="tel" placeholder="Телефон"/>
+            <Input id="email" name="email" type="email" placeholder="E-mail"/>
+            <Button id="contact-with-us-btn">Связаться с нами</Button>
+        </form>
+        <div class="contact-with-us-paragraph">
+            <h1>Оставьте заявку на консультацию</h1>
+            <p>
+                Для того, чтобы связаться с нами укажите <strong>свое имя</strong>, <strong>номер телефона</strong> и <strong>e-mail</strong>. <br>
+                Мы свяжемся с вами в течении дня.
+            </p>
+        </div>
+    </div>
+</Container>
+
+<style>
+    .contact-with-us {
+        width: fit-content;
+        background-color: var(--accent-light);
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        padding: 50px;
+        margin: 0 auto;
+    }
+
+    .contact-with-us-form {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        margin-right: 50px;
+    }
+
+    .contact-with-us-paragraph {
+        font-size: 1.2rem;
+    }
+</style>
